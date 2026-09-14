@@ -15,9 +15,9 @@ from PCA_AutoEncoder.main_PCA_AE import main as run_pca_autoencoder
 
 # ── Select pipelines — add/remove names to run ────────────────────────────────
 RUN = [
-    #"Fish Simulation",              # single simulated trajectory + animation
+    "Fish Simulation",              # single simulated trajectory + animation
     #"Simulation Data Generation",   # data-pool / training-data pipeline (Simulation_Data_Generation/)
-    "PCA AutoEncoder",              # PCA/autoencoder noise-experiment pipeline (PCA_AutoEncoder/)
+    #"PCA AutoEncoder",              # PCA/autoencoder noise-experiment pipeline (PCA_AutoEncoder/)
 ]
 
 # ── Pipeline registry — maps each name to its main() function ─────────────────
@@ -40,3 +40,6 @@ if __name__ == '__main__':
         for name in RUN:
             print(f"\n{'='*70}\n  {name}\n{'='*70}")
             REGISTRY[name]()
+
+
+
