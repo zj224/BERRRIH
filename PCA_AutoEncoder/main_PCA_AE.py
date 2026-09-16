@@ -71,7 +71,7 @@ NOISE = {
 # ── Autoencoder architecture/training settings (Autoencoder_noise.py) ─────────
 LATENT_DIM  = 9
 HIDDEN_DIMS = [128, 64]
-DROPOUT     = 0.2
+DROPOUT     = 0.1
 
 # ── Reconstruction-plot settings (PCA and autoencoder variants) ───────────────
 TAU            = np.array([0.93, 0.32])   # [C_A, C_offset], held constant for the whole run
@@ -81,7 +81,7 @@ X_INIT, Y_INIT = -0.5, 0.0
 # Which saved fit each reconstruction plot should load. None = auto-use the
 # most recent (highest-numbered) fit of the matching kind.
 PCA_PATH         = None
-#AUTOENCODER_PATH = "Data_Collection/Autoencoder_Models/autoencoder_xfem_3.pth"
+#AUTOENCODER_PATH = "PCA_AutoEncoder/AutoEncoder/AutoEncoder_Models/autoencoder_xfem_2.pth"
 AUTOENCODER_PATH = None
 
 # Which saved PCA fit(s) PCA_Model_Comparison.py compares. None = every
@@ -117,11 +117,11 @@ NOISE_INDEX_GROUPS = {
 RUN = [
     # ── Train Models (noisy) ───────────────────────────────────────────────
     #"PCA Train",                  # sample+noise Xfem from the data pool, fit+save PCA
-    "Autoencoder Train",          # sample+noise Xfem from the data pool, train+save autoencoder
+    #"Autoencoder Train",          # sample+noise Xfem from the data pool, train+save autoencoder
 
     # ── Plotting/Analysis ───────────────────────────────────────────────────
     #"PCA Reconstruction",          # true vs PCA round-trip of noisy Xfem vs true+noise, single trajectory
-    #"PCA Model Comparison",        # compare saved PCA fits: MSE + variance, and round-trip of one trajectory
+    "PCA Model Comparison",        # compare saved PCA fits: MSE + variance, and round-trip of one trajectory
     #"Autoencoder Reconstruction", # true vs autoencoder round-trip of noisy Xfem vs true+noise, single trajectory
     #"PCA vs Autoencoder",          # both models round-tripped on the same noisy Xfem, one plot + MAE table
 ]

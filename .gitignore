@@ -1,0 +1,48 @@
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+*/venv/
+*/.venv/
+
+# Python bytecode/cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data files (simulation outputs, data pools)
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.csv
+*.pkl
+*.pickle
+
+# Trained model files
+*.joblib
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Generated images/plots
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+!Results/Images/*.png
+
+# OS / editor junk
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env

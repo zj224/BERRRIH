@@ -16,7 +16,6 @@ TRAINING_DATA_COLLECTION_DIR = DATA_COLLECTION_DIR / 'Training_Data_Collection'
 ROLLOUT_DATA_DIR             = TRAINING_DATA_COLLECTION_DIR / 'Rollout_Data'
 PCA_ROLLOUT_DATA_DIR         = TRAINING_DATA_COLLECTION_DIR / 'PCA_Rollout_Data'
 PCA_TRANSFORMED_DATA_DIR     = DATA_COLLECTION_DIR / 'PCA_Transformed_Data'
-AUTOENCODER_MODELS_DIR       = DATA_COLLECTION_DIR / 'AutoEncoder_Models'
 MODELS_DIR                    = DATA_COLLECTION_DIR / 'Models'
 
 # Frozen sim-trained surrogate, shared (read-only) by the Sim2Real/MPC scripts.
@@ -36,6 +35,7 @@ SIM_DATA_GEN_DIR         = PROJECT_ROOT / 'Simulation_Data_Generation'
 PCA_DIR = PROJECT_ROOT / 'PCA_AutoEncoder' / 'PCA'
 AUTOENCODER_DIR = PROJECT_ROOT / 'PCA_AutoEncoder' / 'AutoEncoder'
 PCA_MODELS_DIR = PCA_DIR / 'PCA_Models'
+AUTOENCODER_MODELS_DIR       = AUTOENCODER_DIR / 'AutoEncoder_Models'
 
 # ── Pipeline step scripts — main_MLP_Pipeline.py ──────────────────────────────
 SCRIPT_DATA_POOL_GENERATION       = SIM_DATA_GEN_DIR / 'Data_Pool_Generation.py'
